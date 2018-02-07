@@ -10,7 +10,7 @@ var putUserName = document.getElementById('putUserName');
 putUserName.innerHTML = `Welcome, ${userName}!`;
 
 
-var playMe = function() {
+var playMe = () => {
   alert('One moment please...');
   alert(`Good to meet you, ${userName}.`);
   alert('Here are some questions about me. Do your best to guess.');
