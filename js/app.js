@@ -18,6 +18,7 @@ var putUserName = document.getElementById('putUserName');
 putUserName.innerHTML = `Welcome, ${userName}!`;
 
 var playMe = () => {
+
   alert('One moment please...');
   alert(`Good to meet you, ${userName}.`);
   alert('Here are 7 questions about me. Do your best to guess the correct answer!');
@@ -117,7 +118,6 @@ var playMe = () => {
         alert(`Got it, ${userName}!`);
         scoreCount++;
         var tryAgain = false;
-        break;
       } 
     }
 
@@ -153,4 +153,4 @@ alert(`I am a lifelong learner, ${userName}. I have a BS in Political Science fr
 goalButton.addEventListener('click', () => {
 alert('The devil\'s hands have been busy. What is it? -John Connor');
 alert(`This is the most exciting part, ${userName}. I want to become a full-stack software developer. I want to work with amazing people, to build amazing things. I want to dream.`);
-});*/
+});
