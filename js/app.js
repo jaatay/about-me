@@ -87,11 +87,11 @@ var playMe = () => {
   alert(`Okay, ${userName}, question 6 is a little different. This time, I want you to guess my favorite number! You will have 4 tries to get it right.`);
 
   while (triesLeft > 0) {
-    var answer6 = prompt('What is my favorite number?').trim();
+    var answer6 = Number(prompt('What is my favorite number?').trim());
     triesLeft--;
     console.log(`User was asked to guess my favorite number, responded with ${answer6}.`);
 
-    if (answer6 == 42) {
+    if (answer6 === 42) {
       alert('Awesome! Got it right!');
       scoreCount++;
       break;
