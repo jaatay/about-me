@@ -2,10 +2,10 @@
 
 'use strict';
 
-// var startButton = document.getElementById('startButton');
-// var bioButton = document.getElementById('bioButton');
-// var eduButton = document.getElementById('eduButton');
-// var goalButton = document.getElementById('goalButton');
+var startButton = document.getElementById('startButton');
+var bioButton = document.getElementById('bioButton');
+var eduButton = document.getElementById('eduButton');
+var goalButton = document.getElementById('goalButton');
 
 var scoreCount = 0;
 var triesLeft = 4;
@@ -134,23 +134,23 @@ while (triesLeftState > 0) {
 }
 
 alert(`Thanks for playing, ${userName}! Your score was ${scoreCount} out of 7! Let's talk again, soon.`);
-// };
+};
 
-// // startButton.addEventListener('click', () => {
-//   playMe();
-// });
+/*startButton.addEventListener('click', () => {
+playMe();
+});
 
-// bioButton.addEventListener('click', () => {
-//   alert('Beyond the path of the outmost sun, through utter darkness hurled, farther than any comet flared, or vagrant stardust swirled...lived such as fought and sailed and ruled and loved...and made our world. -Kipling');
-//   alert(`Very well, ${userName}. I was born on Winter Solstice in 1981. I'm a native of Portland, Oregon. The era of Bon Jovi was a blast, but I don't remember because I spent most of it in diapers. I still did my best to Keep Portland Wierd, diapers or not. Later on I joined the Marine Corps and had many adventures. Afterwards, I became an Emergency Medical Technician before switching to software development.`);
-// });
+bioButton.addEventListener('click', () => {
+alert('Beyond the path of the outmost sun, through utter darkness hurled, farther than any comet flared, or vagrant stardust swirled...lived such as fought and sailed and ruled and loved...and made our world. -Kipling');
+alert(`Very well, ${userName}. I was born on Winter Solstice in 1981. I'm a native of Portland, Oregon. The era of Bon Jovi was a blast, but I don't remember because I spent most of it in diapers. I still did my best to Keep Portland Wierd, diapers or not. Later on I joined the Marine Corps and had many adventures. Afterwards, I became an Emergency Medical Technician before switching to software development.`);
+});
 
-// eduButton.addEventListener('click', () => {
-//   alert('And this gray spirit yearning in desire, to follow knowledge like a sinking star, beyond the utmost bound of human thought. -Tennyson');
-//   alert(`I am a lifelong learner, ${userName}. I have a BS in Political Science from Oregon State University, and a Emergency Medical Technician certificate from Kapiolani Community College, Hawaii. Most recently I was accepted into a graduate Nursing program at the University of Hawaii - Manoa, until the opportunity to attend Code Fellows and pursue my passion for coding presented itself.`);
-// });
+eduButton.addEventListener('click', () => {
+alert('And this gray spirit yearning in desire, to follow knowledge like a sinking star, beyond the utmost bound of human thought. -Tennyson');
+alert(`I am a lifelong learner, ${userName}. I have a BS in Political Science from Oregon State University, and a Emergency Medical Technician certificate from Kapiolani Community College, Hawaii. Most recently I was accepted into a graduate Nursing program at the University of Hawaii - Manoa, until the opportunity to attend Code Fellows and pursue my passion for coding presented itself.`);
+});
 
-// goalButton.addEventListener('click', () => {
-//   alert('The devil\'s hands have been busy. What is it? -John Connor');
-//   alert(`This is the most exciting part, ${userName}. I want to become a full-stack software developer. I want to work with amazing people, to build amazing things. I want to dream.`);
-// });
+goalButton.addEventListener('click', () => {
+alert('The devil\'s hands have been busy. What is it? -John Connor');
+alert(`This is the most exciting part, ${userName}. I want to become a full-stack software developer. I want to work with amazing people, to build amazing things. I want to dream.`);
+});*/
