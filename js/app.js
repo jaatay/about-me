@@ -10,6 +10,7 @@
 var scoreCount = 0;
 var triesLeft = 4;
 var triesLeftState = 6;
+var tryAgain;
 var rightAnswers = ['oregon' , 'california' , 'north Carolina' , 'virginia' , 'hawaii'];
 
 var userName = prompt('What is your name?');
@@ -32,7 +33,7 @@ if (answer1 === 'yes' || answer1 === 'y') {
 } else {
   alert(`...hmm...tell you what, ${userName}, let's just get this over with...`);
 }
-console.log('User was asked if they were ready, and answered with ' + answer1);
+console.log(`User was asked if they were ready, and answered with ${answer1}.`);
 
 var answer2 = prompt('Is 42 the answer to life, love, and everything?').toLowerCase().trim();
 
@@ -44,7 +45,7 @@ if (answer2 === 'yes' || answer2 === 'y') {
 } else {
   alert(`${userName}...I mean, these are yes or no questions. Focus!`);
 }
-console.log('User was asked the answer to The Question, and they responded with ' + answer2);
+console.log(`User was asked the answer to The Question, and they responded with ${answer2}`);
 
 var answer3 = prompt('Semper Fi?').toLowerCase().trim();
 
@@ -56,7 +57,7 @@ if (answer3 === 'yes' || answer3 === 'y') {
 } else {
   alert(`Work on it, ${userName}`);
 }
-console.log('User was shown latin for always faithful, and responded with ' + answer3);
+console.log(`User was shown latin for always faithful, and responded with ${answer3}`);
 
 var answer4 = prompt('Am I human?').toLowerCase().trim();
 
@@ -68,7 +69,7 @@ if (answer4 === 'yes' || answer4 === 'y') {
 } else {
   alert(`Are we even speaking the same language, ${userName}? Actually, we might not be, since I get my language libraries from Pirate Bay.`);
 }
-console.log('The user was asked to answer whether or not they thought I was human, and responded with ' + answer4);
+console.log(`The user was asked to answer whether or not they thought I was human, and responded with ${answer4}`);
 
 var answer5 = prompt('Is my favorite poem written by Rudyard Kipling?').toLowerCase().trim();
 
@@ -80,7 +81,7 @@ if (answer5 === 'yes' || answer5 === 'y') {
 } else {
   alert('Stastically, you had a 50% chance to get this right and still managed to be an outlier. Well played.');
 }
-console.log('The user was asked if my favorite poem was written by Kipling, and responded with ' + answer5);
+console.log(`The user was asked if my favorite poem was written by Kipling, and responded with ${answer5}`);
 
 alert(`Okay, ${userName}, question 6 is a little different. This time, I want you to guess my favorite number! You will have 4 tries to get it right.`);
 
@@ -93,8 +94,10 @@ while (triesLeft > 0) {
     alert('Awesome! Got it right!');
     scoreCount++;
     break;
+  } else if (answer6 > 42) {
+    alert(`Sorry, ${userName}, that is not correct. You have ${triesLeft} tries left! Your number is too high!`);
   } else {
-    alert(`Sorry, ${userName}, that is not correct. You have ${triesLeft} tries left!`);
+    alert(`Sorry, ${userName}, that is not correct. You have ${triesLeft} tries left! Your number is too low!`);
   }
 
   if (triesLeft === 0) {
@@ -105,7 +108,6 @@ while (triesLeft > 0) {
 alert(`Alright, ${userName}, last but not least...you have 6 tries to guess the correct answer to...`);
 
 while (triesLeftState > 0) {
-  var tryAgain = true;
   var answer7 = prompt('What state have I lived in besides Washington?').toLowerCase().trim();
   triesLeftState--;
   console.log(`User was asked to name a state I've lived in, and responded with ${answer7}.`);
@@ -116,13 +118,22 @@ while (triesLeftState > 0) {
       scoreCount++;
       var tryAgain = false;
       break;
-    } else {
-      alert(`Sorry, that was not correct. You have ${triesLeftState} guesses to get it right!`);
-    }  
+    } 
+  }
+
+  if (tryAgain === false) {
+    alert(`The correct answers were any of the following: Oregon, California, Virginia, North Carolina, or Hawaii.`);
+    break;
+  } else {
+    alert(`You have ${triesLeftState} tries remaining.`);
+  }
+
+  if (triesLeftState === 0) {
+    alert(`The correct answers were any of the following: Oregon, California, Virginia, North Carolina, or Hawaii.`);
   }
 }
 
-alert(`The correct answers were any of the following: Oregon, California, Virginia, North Carolina, or Hawaii.`);
+alert(`Thanks for playing, ${userName}! Your score was ${scoreCount} out of 7! Let's talk again, soon.`);
 // };
 
 // // startButton.addEventListener('click', () => {
