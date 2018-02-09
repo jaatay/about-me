@@ -11,7 +11,7 @@ var scoreCount = 0;
 var triesLeft = 4;
 var triesLeftState = 6;
 var tryAgain;
-var rightAnswers = ['oregon' , 'california' , 'north Carolina' , 'virginia' , 'hawaii'];
+var rightAnswers = ['oregon' , 'california' , 'north carolina' , 'virginia' , 'hawaii'];
 
 var userName = prompt('What is your name?');
 var putUserName = document.getElementById('putUserName');
@@ -22,7 +22,7 @@ var playMe = () => {
   alert('One moment please...');
   alert(`Good to meet you, ${userName}.`);
   alert('Here are 7 questions about me. Do your best to guess the correct answer!');
-  alert('Also, please answer all questions with yes/no, or y/n, except 6 and 7.');
+  alert('Also, please answer all questions with yes/no, or y/n, except questions 6 and 7.');
 
   function question1 () {
 
@@ -45,7 +45,7 @@ var playMe = () => {
     var answer2 = prompt('Is 42 the answer to life, love, and everything?').toLowerCase().trim();
 
     if (answer2 === 'yes' || answer2 === 'y') {
-      alert(`Truly, ${userName}, you are wise. Thanks for all the fish.`);
+      alert(`Truly, ${userName}, you are wise. So long, and thanks for all the fish.`);
       scoreCount++;
     } else if (answer2 === 'no' || answer2 === 'n') {
       alert(`Clearly, you have not been listening to dolphins, ${userName}.`);
@@ -68,7 +68,7 @@ var playMe = () => {
     } else {
       alert(`Work on it, ${userName}`);
     }
-    console.log(`User was shown latin for always faithful, and responded with ${answer3}`);
+    console.log(`User was shown the Marine Corps motto: always faithful, and responded with ${answer3}`);
   }
   question3();
 
@@ -105,7 +105,9 @@ var playMe = () => {
   question5();
 
   alert(`Okay, ${userName}, question 6 is a little different. This time, I want you to guess my favorite number! You will have 4 tries to get it right.`);
+
   function question6 () {
+
     while (triesLeft > 0) {
       var answer6 = Number(prompt('What is my favorite number?').trim());
       triesLeft--;
