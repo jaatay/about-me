@@ -135,7 +135,7 @@ var playMe = () => {
   function question7 () {
 
     while (triesLeftState > 0) {
-      var answer7 = prompt('What state have I lived in besides Washington?').toLowerCase().trim();
+      var answer7 = prompt('What state have I lived in besides Washington?').toLowerCase();
       triesLeftState--;
       console.log(`User was asked to name a state I've lived in, and responded with ${answer7}.`);
 
