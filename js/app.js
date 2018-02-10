@@ -1,5 +1,4 @@
 
-
 'use strict';
 
 var startButton = document.getElementById('startButton');
@@ -7,17 +6,17 @@ var bioButton = document.getElementById('bioButton');
 var eduButton = document.getElementById('eduButton');
 var goalButton = document.getElementById('goalButton');
 
-var scoreCount = 0;
-var triesLeft = 4;
-var triesLeftState = 6;
-var tryAgain;
-var rightAnswers = ['oregon' , 'california' , 'north carolina' , 'virginia' , 'hawaii'];
-
 var userName = prompt('What is your name?');
 var putUserName = document.getElementById('putUserName');
 putUserName.innerHTML = `Welcome, ${userName}!`;
 
 var playMe = () => {
+
+  var scoreCount = 0;
+  var triesLeft = 4;
+  var triesLeftState = 6;
+  var tryAgain;
+  var rightAnswers = ['oregon' , 'california' , 'north carolina' , 'virginia' , 'hawaii'];
 
   alert('One moment please...');
   alert(`Good to meet you, ${userName}.`);
@@ -38,8 +37,7 @@ var playMe = () => {
     }
     console.log(`User was asked if they were ready, and answered with ${answer1}.`);
   }
-  question1();
-
+  
   function question2 () {
 
     var answer2 = prompt('Is 42 the answer to life, love, and everything?').toLowerCase().trim();
@@ -54,7 +52,6 @@ var playMe = () => {
     }
     console.log(`User was asked the answer to The Question, and they responded with ${answer2}`);
   }
-  question2();
 
   function question3 () {
 
@@ -70,7 +67,6 @@ var playMe = () => {
     }
     console.log(`User was shown the Marine Corps motto: always faithful, and responded with ${answer3}`);
   }
-  question3();
 
   function question4 () {
 
@@ -86,7 +82,6 @@ var playMe = () => {
     }
     console.log(`The user was asked to answer whether or not they thought I was human, and responded with ${answer4}`);
   }
-  question4();
 
   function question5 () {
 
@@ -102,7 +97,6 @@ var playMe = () => {
     }
     console.log(`The user was asked if my favorite poem was written by Kipling, and responded with ${answer5}`);
   }
-  question5();
 
   alert(`Okay, ${userName}, question 6 is a little different. This time, I want you to guess my favorite number! You will have 4 tries to get it right.`);
 
@@ -128,7 +122,6 @@ var playMe = () => {
       }
     }
   }
-  question6();
 
   alert(`Alright, ${userName}, last but not least...you have 6 tries to guess the correct answer to...`);
 
@@ -143,7 +136,7 @@ var playMe = () => {
         if (answer7 === rightAnswers[i]) {
           alert(`Got it, ${userName}!`);
           scoreCount++;
-          var tryAgain = false;
+          tryAgain = false;
         }
       }
 
@@ -159,26 +152,38 @@ var playMe = () => {
       }
     }
   }
+
+  question1();
+  question2();
+  question3();
+  question4();
+  question5();
+  question6();
   question7();
 
   alert(`Thanks for playing, ${userName}! Your score was ${scoreCount} out of 7! Let's talk again, soon.`);
+
 };
 
 startButton.addEventListener('click', () => {
   playMe();
+  startButton.blur();
 });
 
 bioButton.addEventListener('click', () => {
   alert('Beyond the path of the outmost sun, through utter darkness hurled, farther than any comet flared, or vagrant stardust swirled...lived such as fought and sailed and ruled and loved...and made our world. -Kipling');
   alert(`Very well, ${userName}. I was born on Winter Solstice in 1981. I'm a native of Portland, Oregon. The era of Bon Jovi was a blast, but I don't remember because I spent most of it in diapers. I still did my best to Keep Portland Wierd, diapers or not. Later on I joined the Marine Corps and had many adventures. Afterwards, I became an Emergency Medical Technician before switching to software development.`);
+  bioButton.blur();
 });
 
 eduButton.addEventListener('click', () => {
   alert('And this gray spirit yearning in desire, to follow knowledge like a sinking star, beyond the utmost bound of human thought. -Tennyson');
   alert(`I am a lifelong learner, ${userName}. I have a BS in Political Science from Oregon State University, and a Emergency Medical Technician certificate from Kapiolani Community College, Hawaii. Most recently I was accepted into a graduate Nursing program at the University of Hawaii - Manoa, until the opportunity to attend Code Fellows and pursue my passion for coding presented itself.`);
+  eduButton.blur();
 });
 
 goalButton.addEventListener('click', () => {
   alert('The devil\'s hands have been busy. What is it? -John Connor');
   alert(`This is the most exciting part, ${userName}. I want to become a full-stack software developer. I want to work with amazing people, to build amazing things. I want to dream.`);
+  goalButton.blur();
 });
