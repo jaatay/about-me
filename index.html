@@ -10,16 +10,18 @@
     </head>
 
     <body>
+
         <h1>{Jesse Atay}</h1>
+        <p>Software Developer</p>
         <h2 id="putUserName">Welcome!</h2>
-        <div class="aboutButtons">
-            <button  id="bioButton">Who am I?</button>
-            <button  id="eduButton">What did I learn?</button>
-            <button  id="goalButton">Where am I going?</button>
-        </div>
-        <button id="startButton">Chat with me</button>
-        <div class="favoriteClass">
-            <button class="aboutButtons">Top Foods!</button>
+        <header>
+            <button  id="bioButton" class="aboutButtons allButtons">Bio</button>
+            <button  id="eduButton" class="aboutButtons allButtons" class>.edu</button>
+            <button  id="goalButton" class="aboutButtons allButtons">Goals</button>
+        </header>
+        <button id="startButton" class="allButtons">Learn More</button>
+        <section class="favoriteClass" id="favoriteClass">
+            <h3>Top Foods!</h3>
             <ol class="listClass">
                 <li>P</li>
                 <li>I</li>
@@ -27,15 +29,19 @@
                 <li>Z</li>
                 <li>A</li>
             </ol>
-            <button class="aboutButtons">Top Tracks!</button>
+            <h3>Top Tracks!</h3>
             <ul class="listClass">
                 <li><a href="https://www.youtube.com/watch?v=AjjlABP5t1Q" target="_blank">"Dream State"</a></li>
                 <li><a href="https://www.youtube.com/watch?v=nrGiHm-iMrM" target="_blank">"Frequency"</a></li>
                 <li><a href="https://www.youtube.com/watch?v=rgFQ6WmxdMs" target="_blank">"Simple Man"</a></li>
                 <li><a href="https://www.youtube.com/watch?v=N3oCS85HvpY" target="_blank">"Where is My Mind?"</a></li>
             </ul>
-        </div>
-        
+        </section>
+        <footer>
+                <a href="https://www.linkedin.com/in/jesse-atay-7865098a/" target="_blank"><img id="linkedIn" src="img/LinkedIn.svg.png" alt="LinkedIn profile" title="Click to to go my LinkedIn profile!" /></a>
+                <a href="https://github.com/jaatay" target="_blank"><img id="github" src="img/github.svg.png" alt="github profile link" title="Click to go to my GitHub profile!" /></a>
+        </footer>
+
        <script src="js/app.js"></script>
     </body>
 

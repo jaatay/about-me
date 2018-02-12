@@ -15,8 +15,8 @@ var playMe = () => {
   var scoreCount = 0;
   var triesLeft = 4;
   var triesLeftState = 6;
-  var tryAgain;
-  var rightAnswers = ['oregon' , 'california' , 'north carolina' , 'virginia' , 'hawaii'];
+  var tryAgain = true;
+  var rightAnswers = ['liquid' , 'solid'];
 
   alert('One moment please...');
   alert(`Good to meet you, ${userName}.`);
@@ -43,7 +43,7 @@ var playMe = () => {
     var answer2 = prompt('Is 42 the answer to life, love, and everything?').toLowerCase().trim();
 
     if (answer2 === 'yes' || answer2 === 'y') {
-      alert(`Truly, ${userName}, you are wise. So long, and thanks for all the fish.`);
+      alert(`Truly, ${userName}, you are wise.`);
       scoreCount++;
     } else if (answer2 === 'no' || answer2 === 'n') {
       alert(`Clearly, you have not been listening to dolphins, ${userName}.`);
@@ -70,17 +70,17 @@ var playMe = () => {
 
   function question4 () {
 
-    var answer4 = prompt('Am I human?').toLowerCase().trim();
+    var answer4 = prompt('Am I the eldest sibling in my family?').toLowerCase().trim();
 
     if (answer4 === 'yes' || answer4 === 'y') {
-      alert('Good. We have finally made a convincing organic simulation. Gluten-free, no less.');
+      alert(`Good job, ${userName}. I have one younger brother.`);
       scoreCount++;
     } else if (answer4 === 'no' || answer4 === 'n') {
-      alert(`Unfortunately you are correct, ${userName}.`);
+      alert(`Unfortunately you are incorrect, ${userName}. I have one younger brother.`);
     } else {
       alert(`Are we even speaking the same language, ${userName}? Actually, we might not be, since I get my language libraries from Pirate Bay.`);
     }
-    console.log(`The user was asked to answer whether or not they thought I was human, and responded with ${answer4}`);
+    console.log(`The user was asked to answer whether or not they thought I was the eldest sibling, and responded with ${answer4}`);
   }
 
   function question5 () {
@@ -88,9 +88,9 @@ var playMe = () => {
     var answer5 = prompt('Is my favorite poem written by Rudyard Kipling?').toLowerCase().trim();
 
     if (answer5 === 'yes' || answer5 === 'y') {
-      alert('No, my favorite poem was written by Tennyson.');
+      alert('No, my favorite poem is "Ulysses" by Tennyson.');
     } else if (answer5 === 'no' || answer5 === 'n') {
-      alert(`Correct, ${userName}, it is not too late to seek a newer world...`);
+      alert(`Correct, ${userName}, my favorite poem is "Ulysses."`);
       scoreCount++;
     } else {
       alert('Stastically, you had a 50% chance to get this right and still managed to be an outlier. Well played.');
@@ -98,11 +98,14 @@ var playMe = () => {
     console.log(`The user was asked if my favorite poem was written by Kipling, and responded with ${answer5}`);
   }
 
-  alert(`Okay, ${userName}, question 6 is a little different. This time, I want you to guess my favorite number! You will have 4 tries to get it right.`);
+  
 
   function question6 () {
 
+    alert(`Okay, ${userName}, question 6 is a little different. This time, I want you to guess my favorite number! You will have 4 tries to get it right.`);
+
     while (triesLeft > 0) {
+      
       var answer6 = Number(prompt('What is my favorite number?').trim());
       triesLeft--;
       console.log(`User was asked to guess my favorite number, responded with ${answer6}.`);
@@ -123,9 +126,9 @@ var playMe = () => {
     }
   }
 
-  alert(`Alright, ${userName}, last but not least...you have 6 tries to guess the correct answer to...`);
-
   function question7 () {
+
+    alert(`Alright, ${userName}, last but not least...you have 6 tries to guess the correct answer to...`);
 
     while (triesLeftState > 0) {
       var answer7 = prompt('What state have I lived in besides Washington?').toLowerCase();
@@ -141,14 +144,14 @@ var playMe = () => {
       }
 
       if (tryAgain === false) {
-        alert('The correct answers were any of the following: Oregon, California, Virginia, North Carolina, or Hawaii.');
+        alert('The correct answers were any of the following: liquid or solid.');
         break;
       } else {
         alert(`You have ${triesLeftState} tries remaining.`);
       }
 
       if (triesLeftState === 0) {
-        alert('The correct answers were any of the following: Oregon, California, Virginia, North Carolina, or Hawaii.');
+        alert('The correct answers were any of the following: liquid or solid.');
       }
     }
   }
@@ -165,25 +168,58 @@ var playMe = () => {
 
 };
 
+startButton.addEventListener('mouseenter' , () => {
+  startButton.style.backgroundColor = 'white';
+  startButton.style.color = 'black';
+  setTimeout(function(){
+    startButton.style.backgroundColor = 'black';
+    startButton.style.color = 'white';
+  }, 100);
+});
+
+bioButton.addEventListener('mouseenter' , () => {
+  bioButton.style.backgroundColor = 'white';
+  bioButton.style.color = 'black';
+  setTimeout(function(){
+    bioButton.style.backgroundColor = 'black';
+    bioButton.style.color = 'white';
+  }, 100);
+});
+
+eduButton.addEventListener('mouseenter' , () => {
+  eduButton.style.backgroundColor = 'white';
+  eduButton.style.color = 'black';
+  setTimeout(function(){
+    eduButton.style.backgroundColor = 'black';
+    eduButton.style.color = 'white';
+  }, 100);
+});
+
+goalButton.addEventListener('mouseenter' , () => {
+  goalButton.style.backgroundColor = 'white';
+  goalButton.style.color = 'black';
+  setTimeout(function(){
+    goalButton.style.backgroundColor = 'black';
+    goalButton.style.color = 'white';
+  }, 100);
+});
+
 startButton.addEventListener('click', () => {
   playMe();
   startButton.blur();
 });
 
 bioButton.addEventListener('click', () => {
-  alert('Beyond the path of the outmost sun, through utter darkness hurled, farther than any comet flared, or vagrant stardust swirled...lived such as fought and sailed and ruled and loved...and made our world. -Kipling');
-  alert(`Very well, ${userName}. I was born on Winter Solstice in 1981. I'm a native of Portland, Oregon. The era of Bon Jovi was a blast, but I don't remember because I spent most of it in diapers. I still did my best to Keep Portland Wierd, diapers or not. Later on I joined the Marine Corps and had many adventures. Afterwards, I became an Emergency Medical Technician before switching to software development.`);
+  alert(`Very well, ${userName}. I was born on Winter Solstice in 1981. I'm a native of Portland, Oregon. The era of Bon Jovi was a blast, but I don't remember because I spent most of it in diapers. I still did my best to Keep Portland Wierd, diapers or not. Later on I joined the Marine Corps and traveled the world. My favorite experience was several deployments as an embedded advisor with foreign forces: small teams leveraging a diverse set of experiences to achieve cross-cultural objectives. Afterwards, I became an Emergency Medical Technician before switching to software development.`);
   bioButton.blur();
 });
 
 eduButton.addEventListener('click', () => {
-  alert('And this gray spirit yearning in desire, to follow knowledge like a sinking star, beyond the utmost bound of human thought. -Tennyson');
-  alert(`I am a lifelong learner, ${userName}. I have a BS in Political Science from Oregon State University, and a Emergency Medical Technician certificate from Kapiolani Community College, Hawaii. Most recently I was accepted into a graduate Nursing program at the University of Hawaii - Manoa, until the opportunity to attend Code Fellows and pursue my passion for coding presented itself.`);
+  alert(`I am a lifelong learner, ${userName}. I have a BS in Political Science from Oregon State University, and a Emergency Medical Technician certificate from Kapiolani Community College, Hawaii. Most recently I was in a Nursing graduate program at the University of Hawaii - Manoa, until the opportunity to attend Code Fellows and pursue my passion for coding presented itself, leading me to Seattle.`);
   eduButton.blur();
 });
 
 goalButton.addEventListener('click', () => {
-  alert('The devil\'s hands have been busy. What is it? -John Connor');
-  alert(`This is the most exciting part, ${userName}. I want to become a full-stack software developer. I want to work with amazing people, to build amazing things. I want to dream.`);
+  alert(`This is the most exciting part, ${userName}. I want to become a full-stack software developer. I want to work with amazing people, and build amazing things. I want to dream.`);
   goalButton.blur();
 });

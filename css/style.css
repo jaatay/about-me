@@ -16,10 +16,28 @@ h2 {
     text-align: center;
 }
 
+p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+header {
+    background-image: url("../img/forest1.jpg");
+    text-align: center;
+    filter: grayscale(50%);
+    height: 100px;
+}
+
+footer {
+    margin: auto;
+    text-align: right;
+    justify-content: right;
+}
+
 #startButton {
-    background-color: red;
-    border: solid 5px;
-    color: black;
+    background-color: black;
+    border: black solid 5px;
+    color: white;
     font-weight: bold;
     text-align: center;
     height: 100px;
@@ -29,10 +47,31 @@ h2 {
     margin: auto;
 }
 
+#forestImage {
+    max-height: 80%;
+    max-width: 50%;
+}
+
+#linkedIn {
+    margin-bottom: 0;
+    max-height: 10%;
+    max-width: 10%;
+}
+
+#github {
+    margin-bottom: 0;
+    max-height: 10%;
+    max-width: 10%;
+}
+
 .aboutButtons {
+    display: inline;
+    justify-content: center;
     text-align: center;
     margin: auto;
-    padding: 50px;
+    color: white;
+    background-color: black;
+    
 }
 
 .favoriteClass {
